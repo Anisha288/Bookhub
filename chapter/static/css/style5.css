@@ -1,0 +1,19 @@
+html {
+    height: 100%;
+}
+body{
+    background-color:rgba(0, 0, 0,0.338); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(images/project.jpg);
+    padding-top: 100px;
+    padding-left: 100px;
+    font-family: 'Charm';font-size: 20px;
+    font-weight: bold;
+}
+h1{
+    font-family: 'Ewert';font-size: 40px;
+    font-weight: bold;
+}

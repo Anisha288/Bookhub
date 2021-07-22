@@ -1,0 +1,157 @@
+{% include 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  {% if user.is_authenticated %}
+  <title>Dashboard</title>
+  {% else %}
+  <title>Home</title>
+  {% endif %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link href='https://fonts.googleapis.com/css?family=Spirax' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rye' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Fondamento' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href='{% static "css/style9.css" %}'>
+
+<body>
+<!-- Header -->
+
+<div class="intro">
+
+<header class="w3-container w3-center"style="padding-top:298px">
+  {% if user.is_authenticated %}
+
+  <link rel="stylesheet" href='{% static "css/style11.css" %}'>
+  
+  <h1 class=" w3-animate" >Welcome!<br> {{ user.first_name }} {{ user.last_name }}</h1> 
+  <h2 class=" w3-animate">Where have you been?<br> We are waiting for you</h2>
+  <br>
+  <h3 class="w3 w3-animate-zoom" style="animation-duration: 2s">Check out our latest collection of books with loads of categories</h3>
+  <a href="{% url 'genre' %}" class="w3-button w3-red w3-animate-fading" type="submit" ><i class="fas fa-book-open"></i>Read More</a>
+  
+  
+  {% else %}
+  
+  <h1 class=" w3-margin" >"A room without books is like a body without a soul"</h1> 
+        <h2 class=" w3-margin">Where have you been?<br> We are waiting for you</h2>
+        <br>
+        <h3 class="w3 w3-animate-zoom" style="animation-duration: 2s">Check out our latest collection of books with loads of categories</h3>
+        <a href="{% url 'genre' %}" class="w3-button w3-red w3-animate-fading" type="submit" style="background: linear-gradient(45deg,rgba(248, 4, 4, 0.815),rgba(243, 126, 17, 0.911) 100%);"><i class="fas fa-book-open"></i>Read More</a>
+        
+    
+        {% endif %}
+    
+       
+      
+    <main class="container" style="margin-top: 10px;">
+        <div class="row text-center">
+            <div class="col" style="margin-top: 100px; margin-bottom: 100px">
+                {% block content %}
+              
+                {% endblock %}
+
+            </main>
+  
+</header>  
+
+<!-- First Grid -->
+<div class="first">
+<div class="w3-row-padding w3-padding-64 w3-container w3-justify w3-content "id="about_project">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>About Project</h1>
+      
+
+      <p class="w3-text-black">Book reading has transformed from Paper editions to electronic formats and contemporary reading is not just limited to Personal Computers but to various handheld devices like Tablets and Mobiles.
+        Bookhub was established in 2020 with the vision to provide an extensive library of books in digital format for free on the Internet.
+        
+        Its been a short time we have come up with this digital library, we are still going strong in our mission to provide a valuable service to our readers.
+        Our mission is to transform the most popular works of legendary authors to modern reading room. We publish pdf books on many subjects for readers of all ages including Fiction,mythology,programming languages and many more and offcourse we do have a section for your kids. We want that the youngest generation should also have the habit of reading story books.
+        We have designed the website with easy to navigate interface  and our responsive web design let you access the website with devices of any screen size including Laptops, Tablets and Mobiles. </p>
+   
+      </div>
+
+    <div class="w3-third w3-center">
+      
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="second">
+    <div class="w3-container w3-padding-64 w3-center" id="team">
+        <h1>MEET OUR TEAM</h1>
+        
+          <p>
+             We are all different in our own way
+          <br> Our passion for work,is all that unites us together<br>
+          </p>  
+            <h2>
+        
+        <div class="w3-row"><br>
+        
+        <div class="w3-quarter">
+          <img src="/static/css/images/Anamika.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+          <h3>Anamika Bera</h3>
+          <p class="w3-large">" Hi, My name is Anamika Bera. I am a MCA final year student. My focus and inspiration of my studies is web development. Through this project I have learnt a lot of new things which enhanced my knowledge and skills and made me more versatile.I am very fortunate to be a part of this project and in the near future we will try to make our project more lively to the users which will contain different features as a whole. Thank you for all the support! "</p>
+        </div>
+        
+        <div class="w3-quarter">
+          <img src="/static/css/images/Anisha.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+          <h3>Anisha Das</h3>
+          <p class="w3-large">" I have always been very keen in learning framework for web development and working on frontend is my passion. This project has been very challenging for me from day 1 as this is my first project and I believe I have proved my best. I have thoroughly enjoyed the process of learning and working.Lots of sleepless nights and the hunger of learning something new is the main key behind the success of this project. Hope all the bookworms love this. "</p>
+        </div>
+        
+        <div class="w3-quarter">
+          <img src="/static/css/images/somok.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+          <h3>Somok Mukherjee</h3>
+          <p class="w3-large">"Hey! This is Somok, I'm currently in my final year of MCA. I have been into web development for nearly three years, learning different frameworks. I have been fond of working in the backend of a system and this project is the proof of the skills I have got. With my team members I have thoroughly enjoyed this beautiful journey and I will keep learning more and more. We hope you enjoy our short yet beautiful compilation of books, Keep spreading love! "</p>    
+         
+        </div>
+        
+        <div class="w3-quarter">
+          <img src="/static/css/images/Ranita.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+          <h3>Ranita Koley</h3>
+          <p class="w3-large">" Hi, myself Ranita Koley,student of MCA. My primary focus is mainly working for frontend in Web development. I have involved myself in this project from the seed of the idea. I really enjoyed the journey from developing this project from scratch with my team members and to learn many new things which will improve my knowledge. I want to push forward in my life as a developer because I am very passionate about it. "</p>
+        </div>
+        
+        </div>
+        </div>
+        
+</div>
+
+<div class="quote">
+<div class="w3-container  w3-center w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: "All the world's a stage,
+      And all the men and women merely players:
+      They have their exits and their entrances;
+      And one man in his time plays many parts."</h1>
+</div>
+</div>
+
+
+
+
+{% include 'footer.html' %}
+  
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

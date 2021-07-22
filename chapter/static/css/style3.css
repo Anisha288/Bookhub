@@ -1,0 +1,86 @@
+html {
+    height: 100%;
+}
+
+body{
+    background-color:rgba(0, 0, 0,0.338); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(images/blurry.jpg);
+}
+header{
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    font-family: cursive;
+    padding-top: 50px; 
+    padding-bottom: 14px;
+}
+.container {
+    margin-top: 100px
+}
+
+.social-icon .fa {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px !important;
+    line-height: 1;
+    font-size: 32px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    color: #000;
+    background: none
+}
+
+.social-icon:hover .fa {
+    opacity: .8
+}
+.social-icon-large {
+    margin-right: 80px
+}
+
+.social-icon-large .fa {
+    font-size: 100px;
+    background: transparent;
+    color: #000;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 300px;
+    height: 300px !important;
+    line-height: 2;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+.social-icon-large:hover .fa {
+    color: #fff
+}
+.social-icon-large:hover .fa-facebook {
+    background-color: #3b5998;
+}
+
+.social-icon-large:hover .fa-twitter {
+    background-color: #00aced;
+}
+.social-icon-large:hover .fa-instagram {
+    background-color: #517fa4;
+}
+.social-icon:hover .fa {
+    opacity: .8
+}
+.btn.btn-round i {
+    font-size: 44px
+}
+.btn-round {
+    border-radius: 4px !important
+}
+footer{
+    background-color: wheat;
+    height: 80px;
+
+}

@@ -1,0 +1,9 @@
+html {
+    height: 100%;
+}
+
+body{
+    background-color: blueviolet;
+    padding-top: 100px;
+    padding-bottom: 100px
+}

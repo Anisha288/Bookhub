@@ -1,0 +1,46 @@
+
+html {
+    height: 100%;
+}
+
+body{
+    
+    background-repeat: no-repeat;
+    background-position : center;
+    background-size: cover;
+    font-family: "Annie Use Your Telescope", "Audiowide", monospace;
+    
+   
+}
+
+.w3-display-left {
+    padding: 25px 50px 75px 100px;
+  }
+
+
+h1
+{
+
+    font-family: "Bad Script";
+    font-size: 100px;
+}
+
+h3
+{
+    font-family: 'Beth Ellen';font-size: 32px;
+    
+}
+
+h3.thick
+{
+ 
+    font-weight: bold;
+      
+      
+}
+
+p.thicker {
+    font-weight: 900;
+  }
+
+  

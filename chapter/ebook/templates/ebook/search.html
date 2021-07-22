@@ -1,0 +1,159 @@
+{% include 'navbar.html' %}
+{% load static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Benne' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Chelsea Market' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Average' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Akaya Kanadaka' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">  
+    <link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet'>
+<link rel="stylesheet" href='{% static "css/style11.css" %}'>
+<link href='https://fonts.googleapis.com/css?family=Rye' rel='stylesheet'>
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<style>
+
+.head
+{
+  padding-top: 100px;
+  font-family: 'Bungee Shade';
+}
+.error
+{
+  font-family: 'Bungee';
+}
+.search
+{
+    font-family: 'Akaya Kanadaka';
+}
+.card-text
+{
+  font-family: 'Benne';
+  font-size: 20px;
+}
+.searchres
+{
+  font-family: 'Chelsea Market';
+  font-size: 30px;
+}
+.card-text
+{
+  font-family: 'Average';
+}
+.card-title
+{
+  font-family: 'Chelsea Market';
+}
+.footer
+{
+  font-family: 'Voltaire';
+}
+</style>
+
+{% if object_search|length < 1 %}
+<title>Error 404 Not Found!</title>
+  <link rel="stylesheet" href='{% static "css/style11.css" %}'>
+<div id="intro" class="view">
+
+    <div class="mask">
+  
+        <div class="container-fluid d-flex align-items-center justify-content-center h-100";>
+
+            <div class="row d-flex justify-content-center text-center">
+
+                <div class="col-md-11">
+                          <div class="logo">
+          <img class="logo icon" src="/static/css/images/errsearch.jpg" width="250" height="250" style="opacity: 1;" alt="">
+      </div>
+    
+                    <!-- Heading -->
+                    <h2 class="error">Error!</h2>
+
+                    <!-- Divider -->
+                    <hr class="hr-light">
+
+
+                    <h4 class="search">
+                        Your search query : <b>{{ query }}</b> did not match any books.</h4>
+
+                        <p class="card-text" >Suggestions:
+                            <br>
+                            Make sure that all words are spelled correctly.<br>
+                                Try different keywords.<br>
+                            Try more general keywords.</p>
+                            
+                            <a role="button" class="btn btn-danger btn-xl m-2" href="{% url 'genre' %}">
+                                <i class="fas fa-backward"></i>&nbsp Go Back..
+                              </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% else %}
+
+    <title>Search Results</title>
+      <div class="my-0" style="background-image: url(https://www.xmple.com/wallpaper/linear-pink-gradient-1920x1080-c2-bd0f73-49092e-a-0-f-14.svg); background-position: cover;">
+          <div class="container" style="background-color: rgba(0, 0, 0, 0.2); width:100%;">
+            <section class="text-center text-md-start">
+              <div class="head">
+                <h4 class="searchres" style="text-shadow: 2px 2px black; margin-top: -10px; padding: 10px;">Search Results</h4>
+                  </div>
+      
+              <!-- Post -->
+              <div class="row">
+                {% for category in object_search %}
+                <div class="col-md-4 mb-4">
+                  <div class="bg-image hover-overlay hover-zoom hover-shadow rounded ripple w3-animate-zoom" data-mdb-ripple-color="light">
+                    <img src="/media/{{category.mainimage}}" class="img" style="width:100%; height:350px; />
+                    <a href="#!">
+                      <div class="mask" style="background: linear-gradient(45deg,rgba(29, 236, 197, 0.5),rgba(91, 14, 214, 0.5) 100%);"></div>
+                    </a>
+                  </div>
+                </div>
+                
+          <div class="col-md-8 mb-4">
+            <h5 class="w3-animate-zoom" style="font-family:Chelsea Market;">{{ category.bookname }} by&nbsp<i class="fas fa-pen-nib w3-animate-zoom"></i> {{category.author}}</h5>
+            <p class="w3-animate-zoom">
+              {{ category.preview_text }}
+            </p>
+
+            <a href="{{category.pdf.url}}"  target="_blank" class="btn btn-danger w3-animate-zoom shadow-5-strong" style="margin-bottom:50px;"><i class="fas fa-book-reader"></i>&nbspRead</a>
+            <a href="{{category.pdf.url}}" download="{{category.pdf.url}}" class="btn btn-success w3-animate-zoom shadow-5-strong" style="margin-bottom:50px;"><i class="fas fa-download"></i>&nbspDownload</a>
+          </div>
+          
+          {% endfor %}
+        </div>
+        <div class="text-center py-4" >
+          <a role="button" class="btn btn-primary btn-lg m-2 shadow-5-strong w3-animate-fading" href="{% url 'genre' %}">
+              <i class="fas fa-backward"></i>&nbsp Go Back..
+            </a>
+      </div>
+      </div>
+      </section>
+      {% include 'footer.html' %}
+      {% endif %}
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+></script>

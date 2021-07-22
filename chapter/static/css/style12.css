@@ -1,0 +1,56 @@
+.categories
+{
+    background-image: url(images/genre.jpg);
+    
+    background-position: center;
+    background-size: cover;
+
+}
+
+h2{
+    padding-top: 60px;
+    font-family: 'Rye';
+    font-size: 30px;
+    color: darkblue;
+}
+
+h3{
+    font-family: 'Limelight';
+    color: white;
+}
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  /* When the input field gets focus, change its width to 100% */
+  input[type=text]:focus {
+    width: 100%;
+  }
+  
+  .card-text
+  {
+    font-family: 'Average';
+  }
+  .card-title
+  {
+    font-family: 'Chelsea Market';
+  }
+  .categories
+  {
+    font-family: 'Chelsea Market';
+    font-size: 16px;
+  }
+  
+  .form-control
+  {
+    font-family: 'Average';
+  }
+  
+  .footer
+  {
+    font-family:'Voltaire' ;
+    color: black;
+  }
+  

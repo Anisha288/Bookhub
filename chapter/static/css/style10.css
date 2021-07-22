@@ -1,0 +1,85 @@
+.pickup
+{
+    background-image: url(images/contact2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+   
+}
+footer{
+    background-image: url(images/footer.jpg);   
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    font-family: 'Fondamento';
+    color: black;
+    
+    
+}
+footer p{
+    font-size: 18px;
+}
+.copyright
+{
+    background-color : black;
+    color: white;
+    font-size: 15px;
+}
+.design
+{
+    background-image: url(images/contact1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.details
+{
+    
+    font-family: 'Miltonian Tattoo';
+    font-size: 22px;
+    color: white;
+}
+.details2
+{
+    font-family: 'Nerko One';
+    font-size: 20px;
+    color: white;
+}
+h3 details{
+    font-family: 'Miltonian Tattoo';
+    color: white;
+}
+
+.pickup h1{
+    font-family: 'Lobster';
+    font-size: 35px;
+}
+
+
+.pickup h3{
+    font-family: 'Lobster';
+    font-size: 22px;
+    
+}
+.w3-section
+{
+    font-family: 'Trade Winds';
+    font-size: 19px;
+}
+.design h3{
+    font-family: 'Trade Winds';
+}
+
+.info h3
+{
+    font-size: 30px;
+}
+.design2
+{
+    padding-bottom: 20px;
+}

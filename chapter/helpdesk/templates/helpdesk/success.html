@@ -1,0 +1,53 @@
+{% extends 'error.html' %}
+
+{% block content %}
+
+ <div id="intro" class="view">
+
+            <div class="mask rgba-black-strong">
+
+                <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+
+                    <div class="row d-flex justify-content-center text-center">
+
+                        <div class="col-md-11">
+                                  <div class="logo">
+                  <img class="logo icon" src="/static/css/images/error.png" width="100" height="100" alt="">
+              </div>
+            
+                            <!-- Heading -->
+                            <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Error!</h2>
+
+                            <!-- Divider -->
+                            <hr class="hr-light">
+
+                            <!-- Description -->
+                            <h4 class="white-text my-4">
+                                Your search query : </b> did not match any documents.</h4>
+
+                                <p class="card-text" >Suggestions:
+                                    <br>
+                                    Make sure that all words are spelled correctly.<br>
+                                        Try different keywords.<br>
+                                    Try more general keywords.</p>
+                                    
+                            <a href="{% url 'base' %}" class="btn btn-outline-white waves-effect waves-light">Go Back..<i class="fa fa-book ml-2"></i></button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</h5>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+{% endblock %}
+
